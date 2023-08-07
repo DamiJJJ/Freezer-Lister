@@ -4,16 +4,14 @@ var schema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-  },
-  email: {
-    type: String,
-    required: true,
     unique: true,
   },
-  gender: String,
-  status: String,
+  quantity: {
+    type: Number,
+    default: 1,
+  },
 });
 
-const Userdb = mongoose.model("userdb", schema);
+const Freezerdb = mongoose.model("freezerdb", schema);
 
-module.exports = Userdb;
+module.exports = Freezerdb;
